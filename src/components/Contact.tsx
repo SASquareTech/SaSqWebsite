@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91-7940039304"]
+    details: ["+91-7550206997"]
   },
   {
     icon: Clock,
