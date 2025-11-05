@@ -14,10 +14,13 @@ const CTA = () => {
             and project estimate from our experts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="accent"
               className="text-base px-8 py-6 shadow-glow hover:shadow-elevated transition-all"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
              Schedule a Call
               <ArrowRight className="ml-2 w-5 h-5" />
