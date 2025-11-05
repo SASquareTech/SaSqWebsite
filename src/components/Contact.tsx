@@ -25,13 +25,13 @@ const contactInfo = [
 
 const globalLocations = [
   {
-    country: "United States"
+    country: "Chennai, India"
   },
   {
-    country: "United Kingdom"
+    country: "Cambridge, UK"
   },
   {
-    country: "India"
+    country: "New Jersey, US"
   }
 ];
 
