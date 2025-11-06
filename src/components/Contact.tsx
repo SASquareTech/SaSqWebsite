@@ -15,12 +15,12 @@ const contactInfo = [
     icon: Phone,
     title: "Phone",
     details: ["+91-7550206997"]
-  },
-  {
-    icon: Clock,
-    title: "Business Hours",
-    details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Weekend: By Appointment"]
   }
+  // {
+  //   icon: Clock,
+  //   title: "Business Hours",
+  //   details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Weekend: By Appointment"]
+  // }
 ];
 
 const globalLocations = [
