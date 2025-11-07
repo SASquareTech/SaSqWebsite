@@ -10,7 +10,7 @@ const Navigation = () => {
               SA Square Technologies
             </span>
           </div>
-          
+
           <Button
             variant="accent"
             size="lg"

@@ -3,12 +3,12 @@ import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative sm:pt-32 pb-16 sm:pb-24 overflow-hidden">
+    <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 overflow-hidden">
       {/* Background gradient accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-hero rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left content */}
@@ -18,11 +18,11 @@ const Hero = () => {
                 Home → <span className="text-primary font-medium">Services</span>
               </span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
               Transform Your Vision into Digital Reality
             </h1>
-            
+
             <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               Develop custom software & AI solutions rapidly.
             </p>
