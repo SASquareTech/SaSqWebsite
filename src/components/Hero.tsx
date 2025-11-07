@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-hero rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left content */}
           <div className="animate-fade-in-up">

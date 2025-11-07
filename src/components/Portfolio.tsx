@@ -34,7 +34,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">

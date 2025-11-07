@@ -114,32 +114,32 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+    <section id="contact" className="py-16 sm:py-24 bg-secondary/30">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="text-left sm:text-center mb-8 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground sm:max-w-2xl sm:mx-auto">
             Ready to start your project? Contact us today for a free consultation
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-6 animate-fade-in-up">
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
+          <div className="space-y-3 sm:space-y-6 animate-fade-in-up">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
                 <Card key={index} className="hover:shadow-elevated transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 text-primary-foreground" />
+                  <CardContent className="p-3 sm:p-6 pt-3 sm:pt-6">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-hero flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground text-lg mb-2">{info.title}</h3>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-semibold text-foreground text-base sm:text-lg mb-1 sm:mb-2">{info.title}</h3>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-muted-foreground">{detail}</p>
+                          <p key={idx} className="text-muted-foreground text-sm sm:text-base break-words">{detail}</p>
                         ))}
                       </div>
                     </div>
@@ -150,10 +150,10 @@ const Contact = () => {
           </div>
 
           <Card className="animate-slide-in-right">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <CardContent className="p-3 sm:p-6 lg:p-8 pt-3 sm:pt-6 lg:pt-8">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2">
                     Full Name
                   </label>
                   <Input
@@ -165,7 +165,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2">
                     Email Address
                   </label>
                   <Input
@@ -178,7 +178,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2">
                     Subject
                   </label>
                   <Input
@@ -190,7 +190,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2">
                     Message
                   </label>
                   <Textarea
@@ -242,7 +242,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {globalLocations.map((location, index) => (
               <Card key={index} className="hover:shadow-elevated transition-all duration-300 animate-fade-in-up">
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center flex-shrink-0">
                       <Globe className="w-6 h-6 text-primary-foreground" />
