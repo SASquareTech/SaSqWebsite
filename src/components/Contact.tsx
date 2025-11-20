@@ -9,7 +9,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["arvind@sasquaretech.onmicrosoft.com"]
+    details: ["info@sasquaretech.com"]
   },
   {
     icon: Phone,
