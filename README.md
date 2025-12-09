@@ -1,6 +1,6 @@
-# SA Square Technologies Website
+# DATAPAAR Website
 
-A modern, responsive website for SA Square Technologies built with React, TypeScript, and Tailwind CSS.
+A modern, responsive website for DATAPAAR built with React, TypeScript, and Tailwind CSS.
 
 ## Tech Stack
 
@@ -161,8 +161,8 @@ Simply run `npm run build` and deploy the `dist/` folder.
 
 ## License
 
-This project is proprietary software owned by SA Square Technologies.
+This project is proprietary software owned by DATAPAAR.
 
 ## Contact
 
-For any inquiries, please reach out through our website contact form or email us at arvind@sasquaretech.onmicrosoft.com
+For any inquiries, please reach out through our website contact form or email us at info@datapaar.com

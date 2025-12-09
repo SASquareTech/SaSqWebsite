@@ -18,7 +18,7 @@ const Features = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Why Choose SA Square Technologies?
+              Why Choose DATAP<span className="text-accent">AA</span>R?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               We deliver innovative technology solutions that transform businesses. 

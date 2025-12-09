@@ -7,7 +7,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
             <span className="text-lg sm:text-2xl lg:text-3xl font-bold text-primary-foreground tracking-tight">
-              SA Square Technologies
+              DATAP<span className="text-accent">AA</span>R
             </span>
           </div>
 

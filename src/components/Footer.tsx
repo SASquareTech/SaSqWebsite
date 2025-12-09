@@ -37,7 +37,7 @@ const Footer = () => {
       <div className="container mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-primary mb-4">SA Square Technologies</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">DATAP<span className="text-accent">AA</span>R</h3>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Transforming businesses through innovative technology solutions. 
               Your trusted partner in digital transformation.
@@ -102,7 +102,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} SA Square Technologies. All rights reserved.
+              © {currentYear} DATAP<span className="text-accent">AA</span>R. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
