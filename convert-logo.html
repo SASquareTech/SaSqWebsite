@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DATAPAAR Logo Export Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #132E5E;
+        }
+        .logo-container {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+        }
+        button {
+            background: #132E5E;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #0f2548;
+        }
+        .instructions {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #132E5E;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DATAPAAR Logo Export Tool</h1>
+
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Click any "Download PNG" button below to save the logo</li>
+                <li>High-resolution PNG files will be downloaded automatically</li>
+                <li>Use these files in Google Slides, PowerPoint, or any other application</li>
+            </ol>
+        </div>
+
+        <div class="logo-container">
+            <h2>1. Main Logo (800x200px) - Dark Blue Background</h2>
+            <canvas id="canvas1" width="1600" height="400"></canvas>
+            <button onclick="downloadLogo('canvas1', 'datapaar-logo-main.png')">Download PNG</button>
+        </div>
+
+        <div class="logo-container">
+            <h2>2. Logo with Transparent Background - Dark Blue Text</h2>
+            <canvas id="canvas2" width="1200" height="240"></canvas>
+            <button onclick="downloadLogo('canvas2', 'datapaar-logo-transparent.png')">Download PNG</button>
+        </div>
+
+        <div class="logo-container">
+            <h2>3. Logo with Transparent Background - White Text</h2>
+            <canvas id="canvas3" width="1200" height="240" style="background: #132E5E;"></canvas>
+            <button onclick="downloadLogo('canvas3', 'datapaar-logo-white.png')">Download PNG</button>
+        </div>
+
+        <div class="logo-container">
+            <h2>4. Square Logo (800x800px) - For Social Media</h2>
+            <canvas id="canvas4" width="1600" height="1600"></canvas>
+            <button onclick="downloadLogo('canvas4', 'datapaar-logo-square.png')">Download PNG</button>
+        </div>
+    </div>
+
+    <script>
+        // Logo 1: Main logo with blue background
+        function drawLogo1() {
+            const canvas = document.getElementById('canvas1');
+            const ctx = canvas.getContext('2d');
+
+            // Background
+            ctx.fillStyle = '#132E5E';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Text
+            ctx.font = 'bold 220px Arial, Helvetica, sans-serif';
+            ctx.textBaseline = 'middle';
+
+            // DATAP
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillText('DATAP', 100, 200);
+
+            // AA (gold)
+            ctx.fillStyle = '#F5B41D';
+            const datapWidth = ctx.measureText('DATAP').width;
+            ctx.fillText('AA', 100 + datapWidth, 200);
+
+            // R
+            ctx.fillStyle = '#FFFFFF';
+            const aaWidth = ctx.measureText('AA').width;
+            ctx.fillText('R', 100 + datapWidth + aaWidth, 200);
+        }
+
+        // Logo 2: Transparent background, dark blue text
+        function drawLogo2() {
+            const canvas = document.getElementById('canvas2');
+            const ctx = canvas.getContext('2d');
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = 'bold 180px Arial, Helvetica, sans-serif';
+            ctx.textBaseline = 'middle';
+
+            // DATAP
+            ctx.fillStyle = '#132E5E';
+            ctx.fillText('DATAP', 20, 120);
+
+            // AA (gold)
+            ctx.fillStyle = '#F5B41D';
+            const datapWidth = ctx.measureText('DATAP').width;
+            ctx.fillText('AA', 20 + datapWidth, 120);
+
+            // R
+            ctx.fillStyle = '#132E5E';
+            const aaWidth = ctx.measureText('AA').width;
+            ctx.fillText('R', 20 + datapWidth + aaWidth, 120);
+        }
+
+        // Logo 3: Transparent background, white text
+        function drawLogo3() {
+            const canvas = document.getElementById('canvas3');
+            const ctx = canvas.getContext('2d');
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = 'bold 180px Arial, Helvetica, sans-serif';
+            ctx.textBaseline = 'middle';
+
+            // DATAP
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillText('DATAP', 20, 120);
+
+            // AA (gold)
+            ctx.fillStyle = '#F5B41D';
+            const datapWidth = ctx.measureText('DATAP').width;
+            ctx.fillText('AA', 20 + datapWidth, 120);
+
+            // R
+            ctx.fillStyle = '#FFFFFF';
+            const aaWidth = ctx.measureText('AA').width;
+            ctx.fillText('R', 20 + datapWidth + aaWidth, 120);
+        }
+
+        // Logo 4: Square logo
+        function drawLogo4() {
+            const canvas = document.getElementById('canvas4');
+            const ctx = canvas.getContext('2d');
+
+            // Background with rounded corners
+            ctx.fillStyle = '#132E5E';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Text
+            ctx.font = 'bold 140px Arial, Helvetica, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            // Measure widths for positioning
+            ctx.font = 'bold 140px Arial, Helvetica, sans-serif';
+            const datapWidth = ctx.measureText('DATAP').width;
+            const aaWidth = ctx.measureText('AA').width;
+            const rWidth = ctx.measureText('R').width;
+            const totalWidth = datapWidth + aaWidth + rWidth;
+
+            let x = centerX - totalWidth / 2;
+
+            // DATAP
+            ctx.fillStyle = '#FFFFFF';
+            ctx.textAlign = 'left';
+            ctx.fillText('DATAP', x, centerY);
+            x += datapWidth;
+
+            // AA (gold)
+            ctx.fillStyle = '#F5B41D';
+            ctx.fillText('AA', x, centerY);
+            x += aaWidth;
+
+            // R
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillText('R', x, centerY);
+        }
+
+        // Download function
+        function downloadLogo(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Draw all logos on page load
+        window.onload = function() {
+            drawLogo1();
+            drawLogo2();
+            drawLogo3();
+            drawLogo4();
+        };
+    </script>
+</body>
+</html>

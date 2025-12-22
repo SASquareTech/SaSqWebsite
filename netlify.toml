@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Edge function to protect video files from direct access
+[[edge_functions]]
+  path = "/assets/*.mp4"
+  function = "protect-video"
+
+# SPA redirect - handle client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables (set these in Netlify dashboard)
+# GOOGLE_SHEETS_WEBHOOK_URL = "your-google-apps-script-web-app-url"
