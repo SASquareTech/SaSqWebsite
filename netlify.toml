@@ -11,6 +11,11 @@
   path = "/assets/*.mp4"
   function = "protect-video"
 
+# Edge function for visitor tracking (has access to geo data)
+[[edge_functions]]
+  path = "/api/track-visitor"
+  function = "track-visitor"
+
 # SPA redirect - handle client-side routing
 [[redirects]]
   from = "/*"

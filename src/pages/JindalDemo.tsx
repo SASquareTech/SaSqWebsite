@@ -39,7 +39,7 @@ const JindalDemo = () => {
       if (isTracked) return;
 
       try {
-        await fetch("/.netlify/functions/track-visitor", {
+        await fetch("/api/track-visitor", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
